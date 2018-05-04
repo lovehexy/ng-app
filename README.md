@@ -1,5 +1,7 @@
 # NgApp
 
+[![Build Status](https://travis-ci.com/lovehexy/ng-app.svg?branch=master)](https://travis-ci.com/lovehexy/ng-app)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
 
 ## Development server

@@ -1,0 +1,25 @@
+language: node_js  #设置语言
+
+node_js: stable
+
+install:
+  - npm install
+
+script:
+  - hexo run build
+
+after_script:
+  - cd ./dist
+  - git init
+  - git config user.name "swust-xiaoj"
+  - git config user.email "swustxiaojie@163.com"
+  - git add .
+  - git commit -m "update site"
+  - git push --force "https://${travis_ng_app}@${GH_REF}" master:gh-pages
+
+branches:
+  only:
+    - master
+env:
+ global:
+   - GH_REF: github.com:lovehexy/ng-app.git
